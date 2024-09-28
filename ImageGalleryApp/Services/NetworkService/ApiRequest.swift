@@ -28,6 +28,10 @@ extension ApiRequest {
 extension ApiRequest {
     func buildURLRequest() -> URLRequest {
         let urlString = baseURL + endpoint
+        return buildURLRequest(with: urlString)
+    }
+    
+    func buildURLRequest(with urlString: String) -> URLRequest {
         guard var url = URL(string: urlString) else {
             fatalError("Invalid URL: \(urlString)")
         }

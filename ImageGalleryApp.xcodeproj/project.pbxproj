@@ -28,8 +28,11 @@
 		C92B370E2CA7D06600633156 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B370D2CA7D06600633156 /* ImageList.swift */; };
 		C92B37102CA7D08100633156 /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B370F2CA7D08100633156 /* ImageDetail.swift */; };
 		C92B37122CA7D12600633156 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37112CA7D12600633156 /* AppConstants.swift */; };
+		C92B37142CA7D2D900633156 /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37132CA7D2D900633156 /* ImageListViewModel.swift */; };
 		C92B37162CA7D4D900633156 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37152CA7D4D900633156 /* AppColor.swift */; };
 		C92B37182CA7D4FA00633156 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37172CA7D4FA00633156 /* ViewExtensions.swift */; };
+		C92B371C2CA8352F00633156 /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B371B2CA8352F00633156 /* ImageDownloadService.swift */; };
+		C92B371E2CA835BC00633156 /* ImageCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B371D2CA835BC00633156 /* ImageCachingService.swift */; };
 		C92B37232CA84A5F00633156 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37222CA84A5F00633156 /* AsyncImageView.swift */; };
 		C92B37252CA84A7600633156 /* AsyncImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37242CA84A7600633156 /* AsyncImageViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -76,8 +79,11 @@
 		C92B370D2CA7D06600633156 /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
 		C92B370F2CA7D08100633156 /* ImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDetail.swift; path = ImageGalleryApp/Modules/ImageGalleryList/Model/ImageDetail.swift; sourceTree = SOURCE_ROOT; };
 		C92B37112CA7D12600633156 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		C92B37132CA7D2D900633156 /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
 		C92B37152CA7D4D900633156 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		C92B37172CA7D4FA00633156 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		C92B371B2CA8352F00633156 /* ImageDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
+		C92B371D2CA835BC00633156 /* ImageCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCachingService.swift; sourceTree = "<group>"; };
 		C92B37222CA84A5F00633156 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		C92B37242CA84A7600633156 /* AsyncImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,8 +194,10 @@
 		C92B36E72CA7CA4300633156 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C92B36EB2CA7CAA100633156 /* NetworkService */,
 				C92B36F42CA7CB1E00633156 /* Coordinator */,
+				C92B36EB2CA7CAA100633156 /* NetworkService */,
+				C92B371A2CA8345400633156 /* ImageCaching */,
+				C92B37192CA8343300633156 /* ImageDownloadService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 		C92B36EE2CA7CAD700633156 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C92B37132CA7D2D900633156 /* ImageListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -331,6 +340,22 @@
 				C92B37002CA7CF2200633156 /* IGApi.swift */,
 			);
 			path = IGApi;
+			sourceTree = "<group>";
+		};
+		C92B37192CA8343300633156 /* ImageDownloadService */ = {
+			isa = PBXGroup;
+			children = (
+				C92B371B2CA8352F00633156 /* ImageDownloadService.swift */,
+			);
+			path = ImageDownloadService;
+			sourceTree = "<group>";
+		};
+		C92B371A2CA8345400633156 /* ImageCaching */ = {
+			isa = PBXGroup;
+			children = (
+				C92B371D2CA835BC00633156 /* ImageCachingService.swift */,
+			);
+			path = ImageCaching;
 			sourceTree = "<group>";
 		};
 		C92B371F2CA84A3900633156 /* AsyncImageView */ = {
@@ -494,6 +519,7 @@
 				C92B36FD2CA7CDAE00633156 /* Coordinator.swift in Sources */,
 				C92B36BE2CA7C96900633156 /* Item.swift in Sources */,
 				C92B37232CA84A5F00633156 /* AsyncImageView.swift in Sources */,
+				C92B371C2CA8352F00633156 /* ImageDownloadService.swift in Sources */,
 				C92B370C2CA7D04800633156 /* AppNetworkError.swift in Sources */,
 				C92B37042CA7CF8800633156 /* ApiService.swift in Sources */,
 				C92B36BA2CA7C96900633156 /* ImageGalleryAppApp.swift in Sources */,
@@ -501,12 +527,14 @@
 				C92B37102CA7D08100633156 /* ImageDetail.swift in Sources */,
 				C92B37062CA7CF9B00633156 /* ApiRequest.swift in Sources */,
 				C92B37252CA84A7600633156 /* AsyncImageViewModel.swift in Sources */,
+				C92B371E2CA835BC00633156 /* ImageCachingService.swift in Sources */,
 				C92B37182CA7D4FA00633156 /* ViewExtensions.swift in Sources */,
 				C92B37122CA7D12600633156 /* AppConstants.swift in Sources */,
 				C92B37082CA7CFAA00633156 /* ApiServiceManager.swift in Sources */,
 				C92B370E2CA7D06600633156 /* ImageList.swift in Sources */,
 				C92B370A2CA7CFEF00633156 /* NetworkService.swift in Sources */,
 				C92B36F92CA7CD6800633156 /* CoordinatorView.swift in Sources */,
+				C92B37142CA7D2D900633156 /* ImageListViewModel.swift in Sources */,
 				C92B37162CA7D4D900633156 /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

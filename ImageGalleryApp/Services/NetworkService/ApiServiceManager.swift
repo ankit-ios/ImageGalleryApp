@@ -25,4 +25,8 @@ final class ApiServiceManager: NetworkService {
     func getImageDetail() async -> IGResponse {
         .imageList(apiService.get(request: IGApi.imageDetail))
     }
+    
+    func downloadImage(_ url: String) async -> IGResponse {
+        .downloadImage(apiService.get(url: url))
+    }
 }
