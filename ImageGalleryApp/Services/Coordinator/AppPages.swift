@@ -14,7 +14,7 @@ protocol Routable: Hashable, Identifiable {
 enum AppPages: Routable {
     
     case imageList
-    case imageDetail(id: String)
+    case imageDetail(_ photo: Photo)
     
     var id: String {
         switch self {

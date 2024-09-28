@@ -9,53 +9,22 @@ import SwiftUI
 import SwiftData
 
 struct ImageDetailView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    
+    private let photo: Photo
+    
+    init(_ photo: Photo) {
+        self.photo = photo
+    }
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+        VStack {
+            Text(photo.title)
+            Text("\(photo.albumId)")
+            Text(photo.thumbnailUrl)
         }
     }
 }
 
 #Preview {
-    ImageDetailView()
-        .modelContainer(for: Item.self, inMemory: true)
+    ImageDetailView(.init(albumId: 1, id: 1, title: "accusamus beatae ad facilis cum similique qui sunt", url: "", thumbnailUrl: "https://via.placeholder.com/150/92c952"))
 }

@@ -6,50 +6,79 @@
 //
 
 import SwiftUI
-import SwiftData
+import Combine
 
 struct ImageListView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @EnvironmentObject private var coordinator: Coordinator
+    @StateObject var vm: ImageListViewModel
+    
+    init(vm: ImageListViewModel = ImageListViewModel(ApiServiceManager())) {
+        self._vm = StateObject(wrappedValue: vm)
+    }
+    
+    private let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        VStack {
+            getBody(for: vm.loadingState)
+        }
+        .padding()
+        .fillMaxHeight()
+        .navigationTitle(ScreenTitleConstant.imageList)
+        .navigationBarTitleDisplayMode(.inline)
+        .background(AppColor.Background.default)
+        .onAppear {
+            if vm.loadingState == .idle {
+                Task { await vm.fetchImageList() }
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+    
+    ///Returing body based on LoadingState
+    @ViewBuilder
+    func getBody(for loadingState: LoadingState) -> some View {
+        switch loadingState {
+        case .idle: EmptyView()
+        case .loading:
+            ProgressView(TitleConstant.loadingDetails)
+                .fillMaxSize()
+                .foregroundColor(AppColor.Text.secondary)
+        case .loaded:
+            imageListView()
+        case .error:
+            ContentUnavailableView {
+                Label(TitleConstant.noDetailsFound, systemImage: ImageConstant.unavailable)
+            } description: {
+                Text(vm.errorMessage ?? "")
+            }
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+    
+    @ViewBuilder func imageListView() -> some View {
+        GeometryReader { geometry in
+            let width = geometry.size.width
+            let cellWidth = width/2 - SpacingConstant.spacing_20
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: SpacingConstant.spacing_20) {
+                    ForEach(vm.photos) { photo in
+                        photoCellView(photo, width: cellWidth)
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    @ViewBuilder func photoCellView(_ photo: Photo, width: CGFloat) -> some View {
+        Button {
+            coordinator.push(page: .imageDetail(photo))
+        } label: {
+            VStack {
+                AsyncImageView(photo.thumbnailUrl)
+                    .frame(width: width, height: width)
             }
         }
     }

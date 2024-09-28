@@ -27,7 +27,7 @@ class Coordinator: ObservableObject {
     func build(page: AppPages) -> some View {
         switch page {
         case .imageList: ImageListView()
-        case .imageDetail(let id): ImageListView()
+        case .imageDetail(let photo): ImageDetailView(photo)
         }
     }
 }
