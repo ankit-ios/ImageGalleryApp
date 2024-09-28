@@ -30,6 +30,8 @@
 		C92B37122CA7D12600633156 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37112CA7D12600633156 /* AppConstants.swift */; };
 		C92B37162CA7D4D900633156 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37152CA7D4D900633156 /* AppColor.swift */; };
 		C92B37182CA7D4FA00633156 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37172CA7D4FA00633156 /* ViewExtensions.swift */; };
+		C92B37232CA84A5F00633156 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37222CA84A5F00633156 /* AsyncImageView.swift */; };
+		C92B37252CA84A7600633156 /* AsyncImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37242CA84A7600633156 /* AsyncImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		C92B37112CA7D12600633156 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		C92B37152CA7D4D900633156 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		C92B37172CA7D4FA00633156 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		C92B37222CA84A5F00633156 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		C92B37242CA84A7600633156 /* AsyncImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 			children = (
 				C92B36ED2CA7CAC000633156 /* ImageGalleryList */,
 				C92B36EC2CA7CABD00633156 /* ImageGalleryDetail */,
+				C92B371F2CA84A3900633156 /* AsyncImageView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -328,6 +333,31 @@
 			path = IGApi;
 			sourceTree = "<group>";
 		};
+		C92B371F2CA84A3900633156 /* AsyncImageView */ = {
+			isa = PBXGroup;
+			children = (
+				C92B37212CA84A5100633156 /* View */,
+				C92B37202CA84A4F00633156 /* ViewModel */,
+			);
+			path = AsyncImageView;
+			sourceTree = "<group>";
+		};
+		C92B37202CA84A4F00633156 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C92B37242CA84A7600633156 /* AsyncImageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C92B37212CA84A5100633156 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C92B37222CA84A5F00633156 /* AsyncImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -463,12 +493,14 @@
 				C92B36BC2CA7C96900633156 /* ImageListView.swift in Sources */,
 				C92B36FD2CA7CDAE00633156 /* Coordinator.swift in Sources */,
 				C92B36BE2CA7C96900633156 /* Item.swift in Sources */,
+				C92B37232CA84A5F00633156 /* AsyncImageView.swift in Sources */,
 				C92B370C2CA7D04800633156 /* AppNetworkError.swift in Sources */,
 				C92B37042CA7CF8800633156 /* ApiService.swift in Sources */,
 				C92B36BA2CA7C96900633156 /* ImageGalleryAppApp.swift in Sources */,
 				C92B37012CA7CF2200633156 /* IGApi.swift in Sources */,
 				C92B37102CA7D08100633156 /* ImageDetail.swift in Sources */,
 				C92B37062CA7CF9B00633156 /* ApiRequest.swift in Sources */,
+				C92B37252CA84A7600633156 /* AsyncImageViewModel.swift in Sources */,
 				C92B37182CA7D4FA00633156 /* ViewExtensions.swift in Sources */,
 				C92B37122CA7D12600633156 /* AppConstants.swift in Sources */,
 				C92B37082CA7CFAA00633156 /* ApiServiceManager.swift in Sources */,
