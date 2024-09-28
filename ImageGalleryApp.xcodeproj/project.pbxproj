@@ -28,6 +28,8 @@
 		C92B370E2CA7D06600633156 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B370D2CA7D06600633156 /* ImageList.swift */; };
 		C92B37102CA7D08100633156 /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B370F2CA7D08100633156 /* ImageDetail.swift */; };
 		C92B37122CA7D12600633156 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37112CA7D12600633156 /* AppConstants.swift */; };
+		C92B37162CA7D4D900633156 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37152CA7D4D900633156 /* AppColor.swift */; };
+		C92B37182CA7D4FA00633156 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37172CA7D4FA00633156 /* ViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		C92B370D2CA7D06600633156 /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
 		C92B370F2CA7D08100633156 /* ImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDetail.swift; path = ImageGalleryApp/Modules/ImageGalleryList/Model/ImageDetail.swift; sourceTree = SOURCE_ROOT; };
 		C92B37112CA7D12600633156 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		C92B37152CA7D4D900633156 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		C92B37172CA7D4FA00633156 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +300,7 @@
 			children = (
 				C92B370B2CA7D04800633156 /* AppNetworkError.swift */,
 				C92B37112CA7D12600633156 /* AppConstants.swift */,
+				C92B37152CA7D4D900633156 /* AppColor.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 		C92B36F72CA7CB4500633156 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C92B37172CA7D4FA00633156 /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -463,11 +469,13 @@
 				C92B37012CA7CF2200633156 /* IGApi.swift in Sources */,
 				C92B37102CA7D08100633156 /* ImageDetail.swift in Sources */,
 				C92B37062CA7CF9B00633156 /* ApiRequest.swift in Sources */,
+				C92B37182CA7D4FA00633156 /* ViewExtensions.swift in Sources */,
 				C92B37122CA7D12600633156 /* AppConstants.swift in Sources */,
 				C92B37082CA7CFAA00633156 /* ApiServiceManager.swift in Sources */,
 				C92B370E2CA7D06600633156 /* ImageList.swift in Sources */,
 				C92B370A2CA7CFEF00633156 /* NetworkService.swift in Sources */,
 				C92B36F92CA7CD6800633156 /* CoordinatorView.swift in Sources */,
+				C92B37162CA7D4D900633156 /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,3 +36,27 @@ enum LoadingState {
     case loaded
     case error
 }
+
+struct TitleConstant {
+    static let close = "Close"
+    static let done = "Done"
+    static let loadingDetails = "Loading Image List..."
+    static let noDetailsFound = "No details found!!"
+}
+
+struct ScreenTitleConstant {
+    static let imageList = "Image Gallery"
+    static let imageDetail = "Image Detail"
+}
+
+struct ImageConstant {
+    static let unavailable = "chart.bar.xaxis.ascending"
+    static let back = "chevron.left"
+}
+
+struct SpacingConstant {
+    static let spacing_2: CGFloat = 2
+    static let spacing_4: CGFloat = 4
+    static let spacing_10: CGFloat = 10
+    static let spacing_20: CGFloat = 20
+}
