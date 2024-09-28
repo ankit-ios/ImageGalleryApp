@@ -96,10 +96,12 @@
 		C92B36B82CA7C96900633156 /* ImageGalleryApp */ = {
 			isa = PBXGroup;
 			children = (
-				C92B36B92CA7C96900633156 /* ImageGalleryAppApp.swift */,
+				C92B36E82CA7CA4500633156 /* Application */,
+				C92B36E72CA7CA4300633156 /* Services */,
+				C92B36E62CA7CA3E00633156 /* Modules */,
+				C92B36E52CA7CA3B00633156 /* Utils */,
+				C92B36E92CA7CA6000633156 /* Resources */,
 				C92B36BB2CA7C96900633156 /* ContentView.swift */,
-				C92B36BD2CA7C96900633156 /* Item.swift */,
-				C92B36BF2CA7C96B00633156 /* Assets.xcassets */,
 				C92B36C12CA7C96B00633156 /* Preview Content */,
 			);
 			path = ImageGalleryApp;
@@ -128,6 +130,157 @@
 				C92B36D82CA7C96B00633156 /* ImageGalleryAppUITestsLaunchTests.swift */,
 			);
 			path = ImageGalleryAppUITests;
+			sourceTree = "<group>";
+		};
+		C92B36E52CA7CA3B00633156 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C92B36F72CA7CB4500633156 /* Extensions */,
+				C92B36F62CA7CB3E00633156 /* ViewModifiers */,
+				C92B36F52CA7CB3C00633156 /* Constants */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C92B36E62CA7CA3E00633156 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C92B36ED2CA7CAC000633156 /* ImageGalleryList */,
+				C92B36EC2CA7CABD00633156 /* ImageGalleryDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C92B36E72CA7CA4300633156 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C92B36F42CA7CB1E00633156 /* Coordinator */,
+				C92B36EA2CA7CA8C00633156 /* DataFetcherService */,
+				C92B36EB2CA7CAA100633156 /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C92B36E82CA7CA4500633156 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C92B36B92CA7C96900633156 /* ImageGalleryAppApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C92B36E92CA7CA6000633156 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C92B36BD2CA7C96900633156 /* Item.swift */,
+				C92B36BF2CA7C96B00633156 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C92B36EA2CA7CA8C00633156 /* DataFetcherService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataFetcherService;
+			sourceTree = "<group>";
+		};
+		C92B36EB2CA7CAA100633156 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		C92B36EC2CA7CABD00633156 /* ImageGalleryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C92B36F22CA7CAE100633156 /* Model */,
+				C92B36F32CA7CAE500633156 /* View */,
+				C92B36F12CA7CADE00633156 /* ViewModel */,
+			);
+			path = ImageGalleryDetail;
+			sourceTree = "<group>";
+		};
+		C92B36ED2CA7CAC000633156 /* ImageGalleryList */ = {
+			isa = PBXGroup;
+			children = (
+				C92B36F02CA7CADC00633156 /* Model */,
+				C92B36EF2CA7CAD900633156 /* View */,
+				C92B36EE2CA7CAD700633156 /* ViewModel */,
+			);
+			path = ImageGalleryList;
+			sourceTree = "<group>";
+		};
+		C92B36EE2CA7CAD700633156 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C92B36EF2CA7CAD900633156 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C92B36F02CA7CADC00633156 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C92B36F12CA7CADE00633156 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C92B36F22CA7CAE100633156 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = "New Group/Model";
+			sourceTree = "<group>";
+		};
+		C92B36F32CA7CAE500633156 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C92B36F42CA7CB1E00633156 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C92B36F52CA7CB3C00633156 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C92B36F62CA7CB3E00633156 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		C92B36F72CA7CB4500633156 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
