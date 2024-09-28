@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ImageListView.swift
 //  ImageGalleryApp
 //
 //  Created by Ankit Sharma on 28/09/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct ImageListView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
 
@@ -56,6 +56,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ImageListView()
         .modelContainer(for: Item.self, inMemory: true)
 }
