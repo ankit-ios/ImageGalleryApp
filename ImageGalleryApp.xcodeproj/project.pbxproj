@@ -19,6 +19,15 @@
 		C92B36FB2CA7CD7C00633156 /* AppPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B36FA2CA7CD7C00633156 /* AppPages.swift */; };
 		C92B36FD2CA7CDAE00633156 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B36FC2CA7CDAE00633156 /* Coordinator.swift */; };
 		C92B36FF2CA7CE0400633156 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B36FE2CA7CE0400633156 /* ImageDetailView.swift */; };
+		C92B37012CA7CF2200633156 /* IGApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37002CA7CF2200633156 /* IGApi.swift */; };
+		C92B37042CA7CF8800633156 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37032CA7CF8800633156 /* ApiService.swift */; };
+		C92B37062CA7CF9B00633156 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37052CA7CF9B00633156 /* ApiRequest.swift */; };
+		C92B37082CA7CFAA00633156 /* ApiServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37072CA7CFAA00633156 /* ApiServiceManager.swift */; };
+		C92B370A2CA7CFEF00633156 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37092CA7CFEF00633156 /* NetworkService.swift */; };
+		C92B370C2CA7D04800633156 /* AppNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B370B2CA7D04800633156 /* AppNetworkError.swift */; };
+		C92B370E2CA7D06600633156 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B370D2CA7D06600633156 /* ImageList.swift */; };
+		C92B37102CA7D08100633156 /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B370F2CA7D08100633156 /* ImageDetail.swift */; };
+		C92B37122CA7D12600633156 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37112CA7D12600633156 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,15 @@
 		C92B36FA2CA7CD7C00633156 /* AppPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPages.swift; sourceTree = "<group>"; };
 		C92B36FC2CA7CDAE00633156 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C92B36FE2CA7CE0400633156 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		C92B37002CA7CF2200633156 /* IGApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGApi.swift; sourceTree = "<group>"; };
+		C92B37032CA7CF8800633156 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		C92B37052CA7CF9B00633156 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		C92B37072CA7CFAA00633156 /* ApiServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceManager.swift; sourceTree = "<group>"; };
+		C92B37092CA7CFEF00633156 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C92B370B2CA7D04800633156 /* AppNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNetworkError.swift; sourceTree = "<group>"; };
+		C92B370D2CA7D06600633156 /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
+		C92B370F2CA7D08100633156 /* ImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDetail.swift; path = ImageGalleryApp/Modules/ImageGalleryList/Model/ImageDetail.swift; sourceTree = SOURCE_ROOT; };
+		C92B37112CA7D12600633156 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,9 +179,8 @@
 		C92B36E72CA7CA4300633156 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C92B36F42CA7CB1E00633156 /* Coordinator */,
-				C92B36EA2CA7CA8C00633156 /* DataFetcherService */,
 				C92B36EB2CA7CAA100633156 /* NetworkService */,
+				C92B36F42CA7CB1E00633156 /* Coordinator */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,16 +203,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C92B36EA2CA7CA8C00633156 /* DataFetcherService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataFetcherService;
-			sourceTree = "<group>";
-		};
 		C92B36EB2CA7CAA100633156 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				C92B37022CA7CF2E00633156 /* IGApi */,
+				C92B37032CA7CF8800633156 /* ApiService.swift */,
+				C92B37052CA7CF9B00633156 /* ApiRequest.swift */,
+				C92B37072CA7CFAA00633156 /* ApiServiceManager.swift */,
+				C92B37092CA7CFEF00633156 /* NetworkService.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -238,6 +253,7 @@
 		C92B36F02CA7CADC00633156 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C92B370D2CA7D06600633156 /* ImageList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +268,7 @@
 		C92B36F22CA7CAE100633156 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C92B370F2CA7D08100633156 /* ImageDetail.swift */,
 			);
 			name = Model;
 			path = "New Group/Model";
@@ -277,6 +294,8 @@
 		C92B36F52CA7CB3C00633156 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				C92B370B2CA7D04800633156 /* AppNetworkError.swift */,
+				C92B37112CA7D12600633156 /* AppConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -293,6 +312,14 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C92B37022CA7CF2E00633156 /* IGApi */ = {
+			isa = PBXGroup;
+			children = (
+				C92B37002CA7CF2200633156 /* IGApi.swift */,
+			);
+			path = IGApi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +457,16 @@
 				C92B36BC2CA7C96900633156 /* ImageListView.swift in Sources */,
 				C92B36FD2CA7CDAE00633156 /* Coordinator.swift in Sources */,
 				C92B36BE2CA7C96900633156 /* Item.swift in Sources */,
+				C92B370C2CA7D04800633156 /* AppNetworkError.swift in Sources */,
+				C92B37042CA7CF8800633156 /* ApiService.swift in Sources */,
 				C92B36BA2CA7C96900633156 /* ImageGalleryAppApp.swift in Sources */,
+				C92B37012CA7CF2200633156 /* IGApi.swift in Sources */,
+				C92B37102CA7D08100633156 /* ImageDetail.swift in Sources */,
+				C92B37062CA7CF9B00633156 /* ApiRequest.swift in Sources */,
+				C92B37122CA7D12600633156 /* AppConstants.swift in Sources */,
+				C92B37082CA7CFAA00633156 /* ApiServiceManager.swift in Sources */,
+				C92B370E2CA7D06600633156 /* ImageList.swift in Sources */,
+				C92B370A2CA7CFEF00633156 /* NetworkService.swift in Sources */,
 				C92B36F92CA7CD6800633156 /* CoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,9 +628,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGalleryApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -609,6 +646,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ankit.ImageGalleryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -620,9 +658,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGalleryApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -637,6 +676,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ankit.ImageGalleryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
