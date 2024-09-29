@@ -18,7 +18,7 @@ struct ImageDetailView: View {
     }
     
     var body: some View {
-        VStack {
+        ScrollView {
             getBody()
         }
         .fillMaxSize()
@@ -32,13 +32,15 @@ struct ImageDetailView: View {
     ///Returing body based on LoadingState
     @ViewBuilder
     func getBody() -> some View {
-        AsyncImageView(vm.detailViewItem.imageURL)
-            .frame(width: Constants.cellHeight, height: Constants.cellHeight)
-        Text("\(vm.detailViewItem.albumId)")
-            .modifier(LargeTitleModifier())
-        Text(vm.detailViewItem.title)
-            .modifier(TitleModifier())
-        Spacer()
+        VStack {
+            AsyncImageView(vm.detailViewItem.imageURL)
+                .frame(width: Constants.cellHeight, height: Constants.cellHeight)
+            Text("\(vm.detailViewItem.albumId)")
+                .modifier(LargeTitleModifier())
+            Text(vm.detailViewItem.title)
+                .modifier(TitleModifier())
+            Spacer()
+        }
     }
 }
 
