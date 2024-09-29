@@ -41,6 +41,7 @@ struct ImageDetailView: View {
                 .modifier(TitleModifier())
             Spacer()
         }
+        .padding(.top, SpacingConstant.spacing_4)
     }
 }
 

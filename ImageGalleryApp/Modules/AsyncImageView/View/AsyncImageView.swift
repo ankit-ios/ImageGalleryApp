@@ -27,7 +27,7 @@ struct AsyncImageView: View {
                 placeholderView()
             }
         }
-        .cornerRadius(10)
+        .cornerRadius(SpacingConstant.spacing_10)
         .shadow(color: .gray, radius: 5, x: 0, y: 5)
         .transition(.opacity)
     }
