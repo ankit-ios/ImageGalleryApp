@@ -10,18 +10,35 @@ import SwiftData
 
 struct ImageDetailView: View {
     
-    private let photo: Photo
+    @EnvironmentObject private var coordinator: Coordinator
+    @State var vm: ImageDetailViewModel
     
     init(_ photo: Photo) {
-        self.photo = photo
+        self.vm = ImageDetailViewModel(ImageDetailViewItem(photo: photo))
     }
     
     var body: some View {
         VStack {
-            Text(photo.title)
-            Text("\(photo.albumId)")
-            Text(photo.thumbnailUrl)
+            getBody()
         }
+        .fillMaxSize()
+        .padding()
+        .showBackButton()
+        .navigationTitle(ScreenTitleConstant.imageDetail)
+        .navigationBarTitleDisplayMode(.inline)
+        .background(AppColor.Background.default)
+    }
+    
+    ///Returing body based on LoadingState
+    @ViewBuilder
+    func getBody() -> some View {
+        AsyncImageView(vm.detailViewItem.imageURL)
+            .frame(width: Constants.cellHeight, height: Constants.cellHeight)
+        Text("\(vm.detailViewItem.albumId)")
+            .modifier(LargeTitleModifier())
+        Text(vm.detailViewItem.title)
+            .modifier(TitleModifier())
+        Spacer()
     }
 }
 

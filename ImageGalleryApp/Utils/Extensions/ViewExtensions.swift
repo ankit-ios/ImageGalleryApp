@@ -22,6 +22,13 @@ public extension View {
     }
 }
 
+public extension View {
+    
+    func showBackButton() -> some View {
+        self.modifier(BackButtonModifier())
+    }
+}
+
 extension Image {
     
     static func image(for data: Data) -> Image? {

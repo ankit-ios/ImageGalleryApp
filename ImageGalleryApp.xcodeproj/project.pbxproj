@@ -34,6 +34,11 @@
 		C92B371E2CA835BC00633156 /* ImageCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B371D2CA835BC00633156 /* ImageCachingService.swift */; };
 		C92B37232CA84A5F00633156 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37222CA84A5F00633156 /* AsyncImageView.swift */; };
 		C92B37252CA84A7600633156 /* AsyncImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92B37242CA84A7600633156 /* AsyncImageViewModel.swift */; };
+		C9B212892CA90C75009F715B /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B212882CA90C75009F715B /* ImageDetailViewModel.swift */; };
+		C9B2128B2CA90CF6009F715B /* ImageDetailViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2128A2CA90CF6009F715B /* ImageDetailViewItem.swift */; };
+		C9B2128D2CA9101E009F715B /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2128C2CA9101E009F715B /* TitleModifier.swift */; };
+		C9B2128F2CA91241009F715B /* BackButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2128E2CA91241009F715B /* BackButtonModifier.swift */; };
+		C9B212912CA9125D009F715B /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B212902CA9125D009F715B /* AppFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,11 @@
 		C92B371D2CA835BC00633156 /* ImageCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCachingService.swift; sourceTree = "<group>"; };
 		C92B37222CA84A5F00633156 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		C92B37242CA84A7600633156 /* AsyncImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageViewModel.swift; sourceTree = "<group>"; };
+		C9B212882CA90C75009F715B /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		C9B2128A2CA90CF6009F715B /* ImageDetailViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewItem.swift; sourceTree = "<group>"; };
+		C9B2128C2CA9101E009F715B /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
+		C9B2128E2CA91241009F715B /* BackButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonModifier.swift; sourceTree = "<group>"; };
+		C9B212902CA9125D009F715B /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +287,7 @@
 		C92B36F12CA7CADE00633156 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C9B212882CA90C75009F715B /* ImageDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,6 +315,7 @@
 				C92B370B2CA7D04800633156 /* AppNetworkError.swift */,
 				C92B37112CA7D12600633156 /* AppConstants.swift */,
 				C92B37152CA7D4D900633156 /* AppColor.swift */,
+				C9B212902CA9125D009F715B /* AppFont.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -311,6 +323,8 @@
 		C92B36F62CA7CB3E00633156 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				C9B2128C2CA9101E009F715B /* TitleModifier.swift */,
+				C9B2128E2CA91241009F715B /* BackButtonModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -375,6 +389,7 @@
 		C9B212872CA90C45009F715B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C9B2128A2CA90CF6009F715B /* ImageDetailViewItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -518,18 +533,23 @@
 				C92B371C2CA8352F00633156 /* ImageDownloadService.swift in Sources */,
 				C92B370C2CA7D04800633156 /* AppNetworkError.swift in Sources */,
 				C92B37042CA7CF8800633156 /* ApiService.swift in Sources */,
+				C9B2128F2CA91241009F715B /* BackButtonModifier.swift in Sources */,
 				C92B36BA2CA7C96900633156 /* ImageGalleryAppApp.swift in Sources */,
 				C92B37012CA7CF2200633156 /* IGApi.swift in Sources */,
 				C92B37062CA7CF9B00633156 /* ApiRequest.swift in Sources */,
 				C92B37252CA84A7600633156 /* AsyncImageViewModel.swift in Sources */,
 				C92B371E2CA835BC00633156 /* ImageCachingService.swift in Sources */,
 				C92B37182CA7D4FA00633156 /* ViewExtensions.swift in Sources */,
+				C9B212892CA90C75009F715B /* ImageDetailViewModel.swift in Sources */,
 				C92B37122CA7D12600633156 /* AppConstants.swift in Sources */,
 				C92B37082CA7CFAA00633156 /* ApiServiceManager.swift in Sources */,
 				C92B370E2CA7D06600633156 /* ImageList.swift in Sources */,
+				C9B212912CA9125D009F715B /* AppFont.swift in Sources */,
 				C92B370A2CA7CFEF00633156 /* NetworkService.swift in Sources */,
+				C9B2128B2CA90CF6009F715B /* ImageDetailViewItem.swift in Sources */,
 				C92B36F92CA7CD6800633156 /* CoordinatorView.swift in Sources */,
 				C92B37142CA7D2D900633156 /* ImageListViewModel.swift in Sources */,
+				C9B2128D2CA9101E009F715B /* TitleModifier.swift in Sources */,
 				C92B37162CA7D4D900633156 /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

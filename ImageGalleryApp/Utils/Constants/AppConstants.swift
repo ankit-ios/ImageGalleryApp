@@ -60,3 +60,7 @@ struct SpacingConstant {
     static let spacing_10: CGFloat = 10
     static let spacing_20: CGFloat = 20
 }
+
+struct Constants {
+    static let cellHeight = 300.0
+}
