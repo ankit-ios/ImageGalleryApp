@@ -86,5 +86,4 @@ struct ImageListView: View {
 
 #Preview {
     ImageListView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
