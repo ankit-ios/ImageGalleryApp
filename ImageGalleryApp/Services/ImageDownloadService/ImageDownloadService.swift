@@ -8,6 +8,8 @@
 import Foundation
 import Combine
 
+//MARK: Handling Image Downloading service
+
 protocol ImageDownloadService {
     var imageCachingService: ImageCachingService { get }
     var networkService: NetworkService { get }

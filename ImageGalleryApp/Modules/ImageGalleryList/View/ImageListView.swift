@@ -26,7 +26,7 @@ struct ImageListView: View {
             getBody(for: vm.loadingState)
         }
         .padding()
-        .fillMaxHeight()
+        .fillMaxSize()
         .navigationTitle(ScreenTitleConstant.imageList)
         .navigationBarTitleDisplayMode(.inline)
         .background(AppColor.Background.default)

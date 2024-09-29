@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+//MARK: - Title Modifiers
+
 struct TitleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(AppFont.title)
-            .padding()
             .multilineTextAlignment(.center)
             .foregroundColor(AppColor.Text.secondary)
     }
@@ -22,6 +23,6 @@ struct LargeTitleModifier: ViewModifier {
         content
             .font(AppFont.largetitle)
             .padding()
-            .foregroundColor(AppColor.Text.secondary)
+            .foregroundColor(AppColor.Text.primary)
     }
 }

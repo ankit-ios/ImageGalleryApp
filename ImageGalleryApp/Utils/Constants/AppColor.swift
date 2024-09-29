@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//MARK: - AppColor
+
 struct AppColor {
     struct Background {
         static let `default`: Color = .white
@@ -15,8 +17,8 @@ struct AppColor {
     }
     
     struct Text {
-        static let primary: Color = .white
-        static let secondary: Color = .black.opacity(0.8)
+        static let primary: Color = .black.opacity(0.8)
+        static let secondary: Color = .black.opacity(0.5)
         static let success: Color = .green
         static let failure: Color = .red
     }

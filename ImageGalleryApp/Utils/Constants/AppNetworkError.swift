@@ -7,6 +7,8 @@
 
 import Foundation
 
+//MARK: - Error Mapping Enum
+
 enum AppNetworkError: Error {
     case invalidRequest
     case badRequest

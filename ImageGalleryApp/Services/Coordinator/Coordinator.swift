@@ -8,7 +8,9 @@
 import SwiftUI
 import Combine
 
-class Coordinator: ObservableObject {
+///`Coordinator` is passed in enviornment object,
+///So all views can access it and make it navigation easier
+final class Coordinator: ObservableObject {
     @Published var path: NavigationPath = NavigationPath()
     
     func push(page: AppPages) {

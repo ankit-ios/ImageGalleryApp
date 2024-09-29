@@ -11,6 +11,7 @@ protocol Routable: Hashable, Identifiable {
     var id: String { get }
 }
 
+///Here we can add more view as cases
 enum AppPages: Routable {
     
     case imageList

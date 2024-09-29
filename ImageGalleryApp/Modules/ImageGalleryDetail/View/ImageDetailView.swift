@@ -8,6 +8,8 @@
 import SwiftUI
 import SwiftData
 
+//MARK: - ImageDetail View
+
 struct ImageDetailView: View {
     
     @EnvironmentObject private var coordinator: Coordinator
@@ -35,16 +37,37 @@ struct ImageDetailView: View {
         VStack {
             AsyncImageView(vm.detailViewItem.imageURL)
                 .frame(width: Constants.cellHeight, height: Constants.cellHeight)
-            Text("\(vm.detailViewItem.albumId)")
-                .modifier(LargeTitleModifier())
-            Text(vm.detailViewItem.title)
-                .modifier(TitleModifier())
+            photoDescriptionView()
             Spacer()
         }
         .padding(.top, SpacingConstant.spacing_4)
     }
+    
+    @ViewBuilder func photoDescriptionView() -> some View {
+        VStack(spacing: SpacingConstant.spacing_10) {
+            HStack {
+                Text(TitleConstant.albumId + ": ")
+                    .modifier(TitleModifier())
+                Text("\(vm.detailViewItem.albumId)")
+                    .modifier(TitleModifier())
+            }
+            HStack {
+                Text(TitleConstant.photoId + ": ")
+                    .modifier(TitleModifier())
+                Text("\(vm.detailViewItem.id)")
+                    .modifier(TitleModifier())
+            }
+            VStack {
+                Text(TitleConstant.photoTitle)
+                    .modifier(LargeTitleModifier())
+                Text(vm.detailViewItem.title.capitalized)
+                    .modifier(TitleModifier())
+            }
+        }
+        .padding(.top, SpacingConstant.spacing_20)
+    }
 }
 
 #Preview {
-    ImageDetailView(.init(albumId: 1, id: 1, title: "accusamus beatae ad facilis cum similique qui sunt", url: "", thumbnailUrl: "https://via.placeholder.com/150/92c952"))
+    ImageDetailView(.stub)
 }

@@ -12,7 +12,7 @@ import Foundation
 enum IGApi: ApiRequest {
     
     case imageList
-    case imageDetail
+    case imageDetail ///Currently we're using it this API, we can use it for future scope of leveraging
     
     var endpoint: String {
         switch self {

@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+//MARK: - Network Api related constants
+
 typealias HTTPMethod = AppConstants.API.HTTPMethod
 
 enum User: String {
@@ -30,6 +32,8 @@ struct AppConstants {
     }
 }
 
+//MARK: - LoadingState Enum
+
 enum LoadingState {
     case idle
     case loading
@@ -37,11 +41,16 @@ enum LoadingState {
     case error
 }
 
+//MARK: - Typographic constants
+
 struct TitleConstant {
     static let close = "Close"
     static let done = "Done"
     static let loadingDetails = "Loading Image List..."
     static let noDetailsFound = "No details found!!"
+    static let albumId = "Album Id"
+    static let photoId = "Photo Id"
+    static let photoTitle = "Photo Title"
 }
 
 struct ScreenTitleConstant {
@@ -52,10 +61,10 @@ struct ScreenTitleConstant {
 struct ImageConstant {
     static let unavailable = "chart.bar.xaxis.ascending"
     static let back = "chevron.left"
+    static let failed = "exclamationmark.triangle.fill"
 }
 
 struct SpacingConstant {
-    static let spacing_2: CGFloat = 2
     static let spacing_4: CGFloat = 4
     static let spacing_10: CGFloat = 10
     static let spacing_20: CGFloat = 20

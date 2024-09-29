@@ -46,6 +46,4 @@ final class ImageListViewModel: ObservableObject, ImageListViewModelInput {
                 .store(in: &cancellables)
         }
     }
-    
-    
 }

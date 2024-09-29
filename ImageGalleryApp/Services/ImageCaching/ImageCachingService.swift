@@ -7,6 +7,8 @@
 
 import Foundation
 
+//MARK: Handling Image Caching service
+
 protocol ImageCachingService {
     func fetchCachedImage(forKey key: String) -> NSObject?
     func cacheImage(_ object: NSObject, forKey key: String)

@@ -8,6 +8,8 @@
 import UIKit
 import SwiftUI
 
+//MARK: - AppFont
+
 struct AppFont {
     
     enum HelveticaNeue: String {

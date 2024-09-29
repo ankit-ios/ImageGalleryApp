@@ -12,9 +12,9 @@ import Foundation
 
 final class ApiServiceManager: NetworkService {
     
-    private var apiService: ApiService
+    private var apiService: ApiServiceProtocol
     
-    init(apiService: ApiService = .shared) {
+    init(apiService: ApiServiceProtocol = ApiService.shared) {
         self.apiService = apiService
     }
     

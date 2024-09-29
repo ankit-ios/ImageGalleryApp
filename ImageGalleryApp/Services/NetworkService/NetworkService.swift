@@ -17,3 +17,8 @@ protocol NetworkService {
     func getImageList() async -> IGResponse
     func downloadImage(_ url: String) async -> IGResponse
 }
+
+protocol ApiServiceProtocol {
+    func get<T: Decodable>(request: ApiRequest) -> AnyPublisher<T, AppNetworkError>
+    func get<T>(url: String) -> AnyPublisher<T, AppNetworkError>
+}

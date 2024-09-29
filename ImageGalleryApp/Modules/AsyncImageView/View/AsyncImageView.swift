@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//MARK: - `AsyncImageView` Is responsible for download and showing image by image url
+
 struct AsyncImageView: View {
     
     @StateObject private var vm: AsyncImageViewModel

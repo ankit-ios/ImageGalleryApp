@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class AsyncImageViewModel: ObservableObject {
+final class AsyncImageViewModel: ObservableObject {
     
     @Published var downloadedImage: Image?
     private let imageUrl: String
@@ -23,12 +23,12 @@ class AsyncImageViewModel: ObservableObject {
     func downloadImage() async {
         await imageDownloadService.loadImage(from: imageUrl)
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { [weak self] completion in
                 switch completion {
                 case .failure(let error):
                     print(error.description)
-                case .finished:
-                    break
+                    self?.downloadedImage = Image(systemName: ImageConstant.failed)
+                case .finished: break
                 }
             }, receiveValue: { [weak self] imageData in
                 withAnimation {

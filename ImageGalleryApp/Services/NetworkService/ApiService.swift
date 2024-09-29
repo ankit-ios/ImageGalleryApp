@@ -9,8 +9,7 @@ import Foundation
 import Combine
 
 //MARK: - Api Service we can laverage for network calling to fetch data from server
-
-final class ApiService {
+final class ApiService: ApiServiceProtocol {
     
     static let shared = ApiService()
     private init() {}
