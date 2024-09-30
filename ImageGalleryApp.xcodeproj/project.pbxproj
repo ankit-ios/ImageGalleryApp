@@ -42,6 +42,7 @@
 		C9B2129B2CA9989C009F715B /* ApiServiceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2129A2CA9989C009F715B /* ApiServiceManagerTests.swift */; };
 		C9B2129D2CA99967009F715B /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2129C2CA99967009F715B /* MockNetworkService.swift */; };
 		C9B2129F2CA99A0D009F715B /* ImageDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2129E2CA99A0D009F715B /* ImageDetailViewModelTests.swift */; };
+		C9B5C1F12CAA8E0900FBEC45 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C9B5C1F02CAA8E0900FBEC45 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +101,8 @@
 		C9B2129A2CA9989C009F715B /* ApiServiceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceManagerTests.swift; sourceTree = "<group>"; };
 		C9B2129C2CA99967009F715B /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		C9B2129E2CA99A0D009F715B /* ImageDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModelTests.swift; sourceTree = "<group>"; };
-		C9B5C1EF2CAA8B2C00FBEC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C9B5C1EF2CAA8B2C00FBEC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9B5C1F02CAA8E0900FBEC45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +153,7 @@
 		C92B36B82CA7C96900633156 /* ImageGalleryApp */ = {
 			isa = PBXGroup;
 			children = (
-				C9B5C1EF2CAA8B2C00FBEC45 /* Info.plist */,
+				C9B5C1F02CAA8E0900FBEC45 /* README.md */,
 				C92B36E82CA7CA4500633156 /* Application */,
 				C92B36E72CA7CA4300633156 /* Services */,
 				C92B36E62CA7CA3E00633156 /* Modules */,
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				C92B36BF2CA7C96B00633156 /* Assets.xcassets */,
+				C9B5C1EF2CAA8B2C00FBEC45 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B5C1F12CAA8E0900FBEC45 /* README.md in Resources */,
 				C92B36C32CA7C96B00633156 /* Preview Assets.xcassets in Resources */,
 				C92B36C02CA7C96B00633156 /* Assets.xcassets in Resources */,
 			);
@@ -763,7 +767,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ImageGalleryApp/Info.plist;
+				INFOPLIST_FILE = ImageGalleryApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -797,7 +801,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ImageGalleryApp/Info.plist;
+				INFOPLIST_FILE = ImageGalleryApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
