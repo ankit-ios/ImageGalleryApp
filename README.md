@@ -28,7 +28,9 @@ API: https://jsonplaceholder.typicode.com/photos
 ## App Demo
 | App Demo                                |
 | -------------------------------------- |
-| ![App Demo](Screenshots/AppDemo.mp4) |
+| ![App Demo](Screenshots/AppDemo.gif) |
+
+[Full App Demo](Screenshots/AppDemo.mp4)
 
 ## Code Coverage Screenshot
 
